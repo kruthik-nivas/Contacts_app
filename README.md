@@ -1,5 +1,7 @@
 # contacts_app
 A contact manager application
+
+Python should bre pre installed
 COPY all these files and folders as it is in repository structure in asingle folder and open your terminal or cmd prompt
 
 navgiate to the project floder and type the following commands one by one
