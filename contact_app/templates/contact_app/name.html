@@ -1,0 +1,18 @@
+{% extends "contact_app/base.html" %}
+{% block content %}
+<p>Name: {{name}}</p>
+<p>
+    {% for mail in email %}
+        Mail id: {{mail}}
+    {% empty %}
+        Maild id: <a href="{% url 'contact_app:new_email' name.id %}">Add Email</a>
+    {% endfor %}
+</p>
+<p>
+    {% for mobile in mobiles %}
+        Mobile Number: +91 {{mobile}}
+    {% empty %}
+        Mobile Number: <a href="{% url 'contact_app:new_pnum' name.id %}">Add Mobile Number</a>
+    {% endfor %}
+</p>
+{% endblock content %}

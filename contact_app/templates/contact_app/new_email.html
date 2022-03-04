@@ -1,0 +1,10 @@
+{% extends "contact_app/base.html" %}
+{% block content %}
+<p><a href="{% url 'contact_app:name' name.id %}">Name: {{name}}</a></p>
+<p>Add a mail id:</p>
+<form action="{% url 'contact_app:new_email' name.id%}" method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name='submit'>Add Email</button>
+</form>
+{% endblock content %}

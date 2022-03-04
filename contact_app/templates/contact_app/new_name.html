@@ -1,0 +1,15 @@
+{% extends "contact_app/base.html" %}
+
+{% block content %}
+
+<p>Add new Contact Name:</p>
+
+<form action="{% url 'contact_app:new_name' %}" method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name="Submit">Add name to all contacts</button>
+</form>
+
+<h4>Note: After creating a name click the name on all contacts page and add respective phone number and email id</h4>
+
+{% endblock content %}

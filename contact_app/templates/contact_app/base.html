@@ -1,0 +1,15 @@
+<p>
+    <a href="{% url 'contact_app:index' %}">Home</a><p></p>
+    <a href="{% url 'contact_app:names' %}">Contacts App</a>
+    <hr>
+    <br>
+    {% if user.is_authenticated %}
+        Hello, {{ user.username }}
+        <a href="{% url 'users:logout'%}">Log out</a>
+    {% else %}
+        <a href="{% url 'users:login' %}">Log in</a>/
+        <a href="{% url 'users:register' %}">Sign up</a>
+    {% endif %}
+</p>
+
+{% block content %} {% endblock content%}

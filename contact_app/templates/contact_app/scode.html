@@ -1,0 +1,10 @@
+<a href="{% url 'contact_app:index' %}">Home</a><p></p>
+<a href="{% url 'contact_app:names' %}">Contacts App</a>
+<p>Give your secret code:</p>
+
+<form action="{% url 'contact_app:scode' %}" method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name="Submit">Save my Secret code</button>
+</form>
+

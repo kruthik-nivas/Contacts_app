@@ -1,0 +1,9 @@
+{% extends "contact_app/base.html" %}
+
+{% block content %}
+
+<h1>This Name will be added to the contacts which will be shown on contacts app page click on the name to add emailid and phone number. Click Continue to go further</h1>
+
+<a href="{% url 'contact_app:names' %}">Continue</a>
+
+{% endblock content %}
